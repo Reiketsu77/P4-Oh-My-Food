@@ -1,0 +1,24 @@
+/*<--------------------------GENERAL-------------------------->*/
+body {
+  font-family: Roboto;
+  margin: 0px;
+}
+
+header h1 {
+  height: 63px;
+  width: 31%;
+}
+
+section h2 {
+  width: 30%;
+}
+
+/*<--------------------------POLICE-------------------------->*/
+@font-face {
+  font-family: Shrikhand;
+  src: url(../police/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../police/Roboto-Regular.ttf);
+}/*# sourceMappingURL=style.css.map */
