@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -12,16 +13,20 @@
             <img src="images/ohmyfood.png" alt="">
         </h1>
         <div>
-            <i>Paris,Belleville</i>
+            <i class="fa-solid fa-location-dot"></i><span>Paris,Belleville</span>
         </div>
     </header>
     <main>
-        <section>
-            <h2>Réserver le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+        <section class="debut">
+            <div id="fond">
+                <h2>Réserver le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <div class="btn">
+                <button>Explorer nos restaurants</button>
+                </div>
+            </div>
         </section>
-        <section>
+        <section class="fonctionnement">
             <h3>Fonctionnement</h3>
             <div>
                 <button>
@@ -32,27 +37,28 @@
                     <i></i>
                     <span>Composez votre menu</span>
                 </button>
+                
                 <button>
-                    <i></i>
+                    <i class="fa-solid fa-store"></i>
                     <span>Dégustez au restaurant</span>
                 </button>
             </div>
         </section>
         <section>
+            <h3>Restaurants</h3>
             <a href="">
-                <h3>Restaurants</h3>
                 <article>
-                    <img src="images/la-palette-du-gout.jpg" alt="">
-                    <div>
-                        <p><strong>La palette du goût</strong></p>
-                        <p>Ménilmontant</p>
+                    <div id="card">
+                        <img class="div1" src="images/la-palette-du-gout.jpg" alt="">
+                        <p class="div2"><strong>La palette du goût</strong></p>
+                        <p class="div2">Ménilmontant</p>
                     </div>
                 </article>
             </a>
             <a href="">
                 <article>
-                    <img src="images/la_note_enchantée.jpg" alt="">
                     <div>
+                        <img src="images/la_note_enchantée.jpg" alt="">
                         <p><strong>La note enchantée</strong></p>
                         <p>Charonne</p>
                     </div>
@@ -60,8 +66,8 @@
             </a>
             <a href="">
                 <article>
-                    <img src="images/A_la_française.jpg" alt="">
                     <div>
+                        <img src="images/A_la_française.jpg" alt="">
                         <p><strong>À la française</strong></p>
                         <p>Cité Rouge</p>
                     </div>
@@ -69,14 +75,15 @@
             </a>
             <a href="">
                 <article>
-                    <img src="images/le_délice_des_sens.jpg" alt="">
                     <div>
+                        <img src="images/le_délice_des_sens.jpg" alt="">
                         <p><strong>Le délice des sens</strong></p>
                         <p>Folie-Méricourt</p>
                     </div>
                 </article>
             </a>
         </section>
+        
     </main>
     <footer>
         <ul>
