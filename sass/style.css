@@ -11,10 +11,18 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header h1 {
-  height: 36px;
+  height: 63px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+header h1 img {
+  height: 36px;
 }
 header .recherche {
   background-color: #EAEAEA;
@@ -23,27 +31,29 @@ header .recherche {
   gap: 17px;
   padding: 16px;
   width: 100%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header input {
   background-color: #EAEAEA;
   border: none;
 }
 
-.debut #fond {
+.debut {
   background-color: #F3F3F3;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 260px;
+  padding-top: 32px;
 }
 .debut h2 {
-  display: flex;
-  justify-content: center;
   font-size: 24px;
   line-height: 28.13px;
   height: 68px;
+  padding: 0px 72px;
 }
 .debut p {
-  display: flex;
-  justify-content: center;
   font-size: 18px;
   line-height: 21.09px;
   font-weight: 300;
@@ -58,9 +68,10 @@ header input {
   border-radius: 24px;
   width: 40%;
   color: white;
-  border: 2px solid transparent;
+  border: 0px solid transparent;
   cursor: pointer;
   margin-top: 10px;
+  padding: 15px;
 }
 .debut .btn {
   display: flex;
@@ -94,18 +105,26 @@ header input {
 .fonctionnement .custom-button i {
   padding-right: 14px;
   color: #7E7E7E;
+  margin-left: 20px;
 }
-.fonctionnement .custom-button span {
+.fonctionnement .custom-button p {
   font-weight: 600;
   font-size: 16px;
   line-height: 18.75px;
 }
-
-article {
-  background-color: #eeeeee;
-  margin-bottom: 20px;
+.fonctionnement .custom-button span {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 6px 11px;
+  margin-left: -31px;
 }
-article .card {
+
+.cardsContainer {
+  padding: 0 35px;
+}
+.cardsContainer article {
+  margin-bottom: 20px;
   background-color: white;
   border-radius: 15px;
   padding-bottom: 10px;
@@ -119,7 +138,7 @@ article .card {
   grid-row-gap: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-article .card .card-image {
+.cardsContainer article .card-image {
   grid-area: 1/1/2/3;
   width: 100%;
   height: 231px;
@@ -127,11 +146,11 @@ article .card .card-image {
   -o-object-fit: cover;
      object-fit: cover;
 }
-article .card .card-info {
+.cardsContainer article .card-info {
   grid-area: 2/1/3/2;
   padding: 10px;
 }
-article .card .card-info p {
+.cardsContainer article .card-info p {
   color: black;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -141,7 +160,7 @@ article .card .card-info p {
   text-decoration: none;
   margin: 0;
 }
-article .card .card-info strong {
+.cardsContainer article .card-info strong {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -150,7 +169,7 @@ article .card .card-info strong {
   color: black;
   text-decoration: none;
 }
-article .card .card-tag {
+.cardsContainer article .card-tag {
   grid-area: 1/2/2/3;
   width: 80%;
   height: 29px;
@@ -163,7 +182,7 @@ article .card .card-tag {
   border-radius: 5px;
   font-size: 0.9em;
 }
-article .card .card-heart {
+.cardsContainer article .card-heart {
   grid-area: 2/2/3/3;
   display: flex;
   justify-content: center;
@@ -177,14 +196,11 @@ footer {
   background-color: #353535;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
 }
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-footer ul h3 {
+footer h3 {
   font-family: Shrikhand;
   font-size: 18px;
   font-style: italic;
@@ -192,6 +208,10 @@ footer ul h3 {
   line-height: 26.24px;
   text-align: left;
   margin: 10px 0;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
 }
 footer ul li {
   margin: 10px 0;
@@ -201,7 +221,7 @@ footer ul li {
 footer ul li i {
   margin-right: 10px;
 }
-footer ul li a {
+footer a {
   color: white;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
