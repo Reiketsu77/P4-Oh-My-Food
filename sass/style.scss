@@ -29,6 +29,7 @@ header {
         }
     }
 
+
     .recherche {
         background-color: #EAEAEA;
         display: flex;
@@ -37,8 +38,12 @@ header {
         padding: 16px;
         width: 100%;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
+        position: relative;
+        padding-left: 60px;
+       
     }
+    
+    
 
     input {
          background-color:#EAEAEA ;
@@ -46,7 +51,8 @@ header {
     }
 }
 
-.debut {
+.reservation {
+
     background-color: #F3F3F3;
     text-align: center;
     display: flex;
@@ -88,12 +94,24 @@ header {
     .btn {
         display: flex;
         justify-content: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.75px;
+        align-items: center;
+        width: 56%;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
 }
 
+
 .fonctionnement {
+    padding: 25px;
+
     h3 {
         font-weight: 700;
+        font-size: 24px;
+        line-height: 28.13px;
+        padding: 20px 0px 0px 0px;
     }
 
     .buttons-container {
@@ -101,6 +119,8 @@ header {
         flex-direction: column;
         gap: 18px;
         margin: 25px;
+        width: 98%;
+        margin-left: 5px;
     }
 
     .custom-button {
@@ -115,14 +135,16 @@ header {
         cursor: pointer;
         transition: background-color 0.3s;
 
-        &:hover {
-            background-color: #e0e0e0;
-        }
-
         i {
             padding-right: 14px;
             color: #7E7E7E;
-            margin-left: 20px;
+            margin-left: 20px;  
+            transition: color 0.3s;
+
+            &:hover {
+                color: #4789E8; 
+                background-color: transparent; 
+            }
         }
 
         p {
@@ -140,8 +162,30 @@ header {
         }
     }
 }
-.cardsContainer {
-    padding: 0 35px;
+
+
+
+
+
+.restaurant {
+
+    background-color:#F3F3F3;   
+    
+    
+h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28.13px;
+        padding: 55px 0px 20px 25px;
+    }
+    
+
+
+.cardscontainer {
+    
+    padding: 0 20px;
+    
+    
     article {
         margin-bottom: 20px;
         background-color: white;
@@ -215,6 +259,7 @@ header {
             cursor: pointer;
         }
     }
+  } 
 }
 
 footer {
@@ -253,7 +298,6 @@ footer {
                 text-decoration: none;
             }
 }
-
 
 
 
