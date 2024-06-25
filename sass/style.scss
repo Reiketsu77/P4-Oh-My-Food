@@ -33,7 +33,6 @@ header {
 }
 
 .reservation {
-
     background-color: #F3F3F3;
     text-align: center;
     display: flex;
@@ -41,52 +40,56 @@ header {
     align-items: center;
     height: 260px;
     padding-top: 32px;
-
+  
     h2 {
-        font-size: 24px;
-        line-height: 28.13px;
-        height: 68px;
-        padding: 0px 72px;
+      font-size: 24px;
+      line-height: 28.13px;
+      height: 68px;
+      padding: 0px 72px;
     }
-
+  
     p {
-        font-size: 18px;
-        line-height: 21.09px;
-        font-weight: 300;
-        
-        a {
-            text-decoration: none; 
-            color: inherit; 
-        }
+      font-size: 18px;
+      line-height: 21.09px;
+      font-weight: 300;
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
-
+  
     button {
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        height: 50px;
-        border-radius: 24px;
-        width: 40%;
-        color: white;
-        border: 0px solid transparent; 
-        cursor: pointer; 
-        margin-top: 10px; 
-        padding: 15px;
+      background: linear-gradient(135deg, #9356DC 100%, #FF79DA 100%);
+      height: 50px;
+      border-radius: 24px;
+      width: 40%;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 15px;
+      transition: background 0.3s;
+  
+      &:hover {
+        background: linear-gradient(177deg, #9356DC 15%, #FF79DA 100%, #FFFFFF 15%);
+      }
     }
-
+  
     .btn {
-        display: flex;
-        justify-content: center;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 18.75px;
-        align-items: center;
-        width: 56%;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18.75px;
+      align-items: center;
+      width: 56%;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
-    input {
-        background-color:#EAEAEA ;
-        border: none;
-   }
-}
+  }
+  
+  
+  
 
 .recherche {
     background-color: #EAEAEA;
@@ -98,6 +101,11 @@ header {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
     padding-left: 60px;
+
+    input {
+        background-color:#EAEAEA ;
+        border: none;
+   }
    
 }
 
