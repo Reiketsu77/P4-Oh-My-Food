@@ -191,3 +191,23 @@ footer {
         text-decoration: none;
     }
 }
+
+
+@media screen and (min-width: 769px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+
+
+    .image {
+        height: 956px;
+    }
+    .card {
+        margin-top: -275px;
+        width: 75%;
+    }
+  }
+}

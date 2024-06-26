@@ -277,7 +277,45 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px 100px;
   }
-  footer {
-    display: flex;
-  }
+}
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  padding: 20px;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.24px;
+  margin: 0 10px;
+  order: 1;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  order: 2;
+}
+footer ul li {
+  margin: 0 50px 0 0;
+  display: flex;
+  align-items: center;
+}
+footer ul li:last-child {
+  margin-right: 0;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  order: 1;
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */

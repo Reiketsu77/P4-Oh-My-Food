@@ -349,10 +349,61 @@ footer {
     }
  }
 
-    footer {
-        display: flex;
-    }
+
 }
+
+footer {
+    background-color: #353535;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 20px;
+  
+    h3 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 26.24px;
+      margin: 0 10px;
+      order: 1;
+    }
+  
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      order: 2;
+  
+      li {
+        margin: 0 50px 0 0; 
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-right: 0;  
+            }
+          
+  
+        i {
+          margin-right: 10px;
+        }
+  
+
+      }
+    }
+  
+    a {
+      color: white;
+      text-decoration: none;
+      order: 1;
+      margin-left: 20px;
+    }
+  }
+  
+  
 
 
 
