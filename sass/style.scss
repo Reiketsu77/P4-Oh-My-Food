@@ -177,101 +177,125 @@ header {
 
 
 .restaurant {
-
-    background-color:#F3F3F3;   
+    background-color: #F3F3F3;
     padding-bottom: 1px;
-    
-    
-h3 {
+
+    h3 {
         font-weight: 700;
         font-size: 24px;
         line-height: 28.13px;
         padding: 55px 0px 20px 25px;
     }
-    
 
+    .cardscontainer {
+        padding: 0 20px;
 
-.cardscontainer {
-    
-    padding: 0 20px;
-    
-    
-    
-    article {
-        margin-bottom: 20px;
-        background-color: white;
-        border-radius: 15px;
-        padding-bottom: 10px;
-        box-sizing: border-box;
-        width: 100%;
-        display: grid;
-        overflow: hidden;
-        grid-template-columns: 4fr 1fr;
-        grid-template-rows: 3fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-        .card-image {
-            grid-area: 1 / 1 / 2 / 3;
+        article {
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 15px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
             width: 100%;
-            height: 231px;
-            border-radius: 15px 15px 0 0;
-            object-fit: cover;
-        }
+            display: grid;
+            overflow: hidden;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 3fr 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-        .card-info {
-            grid-area: 2 / 1 / 3 / 2;
-            padding: 10px;
-
-            p {
-                color: black;
-                font-family: 'Roboto', sans-serif;
-                font-size: 17px;
-                font-weight: 300;
-                line-height: 19.92px;
-                text-align: left;
-                text-decoration: none;
-                margin: 0;
+            .card-image {
+                grid-area: 1 / 1 / 2 / 3;
+                width: 100%;
+                height: 231px;
+                border-radius: 15px 15px 0 0;
+                object-fit: cover;
             }
 
-            strong {
-                font-family: 'Roboto', sans-serif;
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 21.09px;
-                text-align: left;
-                color: black;
-                text-decoration: none;
+            .card-info {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 10px;
+
+                p {
+                    color: black;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 19.92px;
+                    text-align: left;
+                    text-decoration: none;
+                    margin: 0;
+                }
+
+                strong {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 21.09px;
+                    text-align: left;
+                    color: black;
+                    text-decoration: none;
+                }
             }
-        }
 
-        .card-tag {
-            grid-area: 1 / 2 / 2 / 3;
-            width: 80%;
-            height: 29px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #99E2D0;
-            color: #008766;
-            margin: 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
+            .card-tag {
+                grid-area: 1 / 2 / 2 / 3;
+                width: 80%;
+                height: 29px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #99E2D0;
+                color: #008766;
+                margin: 10px;
+                border-radius: 5px;
+                font-size: 0.9em;
+            }
 
-        .card-heart {
-            grid-area: 2 / 2 / 3 / 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #d3d3d3;
-            font-size: 1.5em;
-            cursor: pointer;
+            .card-heart {
+                grid-area: 2 / 2 / 3 / 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #d3d3d3;
+                font-size: 1.5em;
+                cursor: pointer;
+                position: relative; // Position relative pour les icônes absolues
+
+                .fa-regular,
+                .fa-solid {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: opacity 0.3s ease; // Transition d'opacité
+                }
+
+                .fa-regular {
+                    opacity: 1; // Cœur vide visible par défaut
+                }
+
+                .fa-solid {
+                    opacity: 0; // Cœur plein initialement caché
+                }
+            }
+
+            input[type="checkbox"] {
+                display: none; // Cacher l'input de type checkbox
+            }
+
+            input[type="checkbox"]:checked ~ .card-heart .fa-regular {
+                opacity: 0; // Cacher le cœur vide lorsque le checkbox est coché
+            }
+
+            input[type="checkbox"]:checked ~ .card-heart .fa-solid {
+                opacity: 1; // Afficher le cœur plein lorsque le checkbox est coché
+            }
         }
     }
-  } 
 }
+
 
 footer {
     background-color: #353535;
@@ -280,6 +304,13 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-bottom: 5px;
+    height: 114px;
+
     h3 {
                 font-family: Shrikhand;
                 font-size: 18px;
@@ -359,49 +390,56 @@ footer {
     flex-direction: row-reverse;
     align-items: flex-end;
     padding: 20px;
-  
+    height: 114px;
+
     h3 {
-      font-family: 'Shrikhand', cursive;
-      font-size: 18px;
-      font-style: italic;
-      font-weight: 400;
-      line-height: 26.24px;
-      margin: 0 10px;
-      order: 1;
+        font-family: 'Shrikhand', cursive;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 26.24px;
+        margin: 0 10px;
+        order: 1;
+        margin-bottom: -2px;
     }
-  
+
     ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      order: 2;
-  
-      li {
-        margin: 0 50px 0 0; 
+        list-style: none;
         display: flex;
-        align-items: center;
+        padding: 0;
+        margin: 0;
+        order: 2;
+        text-decoration: none;
+        margin-bottom: -10px;
+        
 
-        &:last-child {
-            margin-right: 0;  
+        li {
+            margin-right: 0px;
+            display: flex;
+            align-items: center;
+
+            
+
+            strong {
+                
+                margin-left: 0;
+
+                &:last-child {
+                    margin-right: 50px;
+                }
             }
-          
-  
-        i {
-          margin-right: 10px;
         }
-  
+    }
 
-      }
-    }
-  
     a {
-      color: white;
-      text-decoration: none;
-      order: 1;
-      margin-left: 20px;
+        color: white;
+        text-decoration: none;
+        order: 1;
+        margin-left: 20px;
+        
     }
-  }
+}
+
   
   
 

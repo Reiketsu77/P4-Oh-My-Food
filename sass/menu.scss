@@ -4,36 +4,7 @@
     box-sizing: border-box;
 }
 
-header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
 
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 400;
-        font-size: 30px;
-        position: relative;
-
-        i {
-            position: absolute;
-            left: 0;
-            margin-left: 20px;  
-        }
-
-        .titre {
-            height: 44px;
-            padding-top: 14px;
-            font-weight: 400;
-            font-size: 30px;
-            margin: 0 auto;
-        }
-    }
-}
 
 
 .image {
@@ -195,6 +166,17 @@ footer {
 
 @media screen and (min-width: 769px) {
 
+    header {
+         
+        h1 {
+            height: 50px;
+            background-color: white;
+        padding: 46px;
+        margin-top: -19px;
+    }
+        }
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -204,10 +186,11 @@ footer {
 
     .image {
         height: 956px;
+        margin-top: -335px;
     }
     .card {
         margin-top: -275px;
         width: 75%;
+        border-radius: 40px 40px 0px 0px;;
     }
   }
-}
