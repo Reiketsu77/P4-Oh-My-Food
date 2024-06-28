@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
 /* Styles généraux */
 body {
     font-family: 'Roboto', sans-serif;
@@ -28,8 +24,6 @@ header {
             height: 36px;
         }
     }  
-
-
 }
 
 .reservation {
@@ -42,55 +36,52 @@ header {
     padding-top: 32px;
   
     h2 {
-      font-size: 24px;
-      line-height: 28.13px;
-      height: 68px;
-      padding: 0px 72px;
+        font-size: 24px;
+        line-height: 28.13px;
+        height: 68px;
+        padding: 0px 72px;
     }
   
     p {
-      font-size: 18px;
-      line-height: 21.09px;
-      font-weight: 300;
+        font-size: 18px;
+        line-height: 21.09px;
+        font-weight: 300;
   
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
   
     button {
-      background: linear-gradient(135deg, #9356DC 100%, #FF79DA 100%);
-      height: 50px;
-      border-radius: 24px;
-      width: 40%;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-      padding: 15px;
-      transition: background 0.3s;
+        background: linear-gradient(135deg, #9356DC 100%, #FF79DA 100%);
+        height: 50px;
+        border-radius: 24px;
+        width: 40%;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 15px;
+        transition: background 0.3s;
   
-      &:hover {
-        background: linear-gradient(177deg, #9356DC 15%, #FF79DA 100%, #FFFFFF 15%);
-      }
+        &:hover {
+            background: linear-gradient(177deg, #9356DC 15%, #FF79DA 100%, #FFFFFF 15%);
+        }
     }
   
     .btn {
-      display: flex;
-      justify-content: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 18.75px;
-      align-items: center;
-      width: 56%;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.75px;
+        align-items: center;
+        width: 56%;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
-  }
+}
   
-  
-  
-
 .recherche {
     background-color: #EAEAEA;
     display: flex;
@@ -106,13 +97,9 @@ header {
         background-color:#EAEAEA ;
         border: none;
    }
-   
 }
 
-
 .fonctionnement {
-
-
     padding: 25px;
 
     h3 {
@@ -151,7 +138,6 @@ header {
 
             &:hover {
                 color:#9356DC;
-
                 background-color: transparent; 
             }
         }
@@ -171,10 +157,6 @@ header {
         }
     }
 }
-
-
-
-
 
 .restaurant {
     background-color: #F3F3F3;
@@ -261,41 +243,51 @@ header {
                 color: #d3d3d3;
                 font-size: 1.5em;
                 cursor: pointer;
-                position: relative; // Position relative pour les icônes absolues
+                position: relative;
+            }     
+        }
+    }
 
-                .fa-regular,
-                .fa-solid {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    transition: opacity 0.3s ease; // Transition d'opacité
-                }
+    .checkbox-container {
+        position: relative;
+        display: inline-block; 
 
-                .fa-regular {
-                    opacity: 1; // Cœur vide visible par défaut
-                }
+        input[type="checkbox"] {
+            display: FLEX; 
+        }
 
-                .fa-solid {
-                    opacity: 0; // Cœur plein initialement caché
-                }
-            }
+        .fa-heart {
+            font-size: 24px; 
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease; 
+            color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)
 
-            input[type="checkbox"] {
-                display: none; // Cacher l'input de type checkbox
-            }
+        }
 
-            input[type="checkbox"]:checked ~ .card-heart .fa-regular {
-                opacity: 0; // Cacher le cœur vide lorsque le checkbox est coché
-            }
+        .fa-regular {
+            z-index: 1; 
+            opacity: 1; 
+        }
 
-            input[type="checkbox"]:checked ~ .card-heart .fa-solid {
-                opacity: 1; // Afficher le cœur plein lorsque le checkbox est coché
-            }
+        .fa-solid {
+            z-index: 0; 
+            opacity: 0; 
+        }
+
+        input[type="checkbox"]:checked + label .fa-regular.fa-heart {
+            opacity: 0; 
+        }
+
+        input[type="checkbox"]:checked + label .fa-solid.fa-heart {
+            opacity: 1; 
+            background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)
+
         }
     }
 }
-
 
 footer {
     background-color: #353535;
@@ -312,14 +304,15 @@ footer {
     height: 114px;
 
     h3 {
-                font-family: Shrikhand;
-                font-size: 18px;
-                font-style: italic;
-                font-weight: 400;
-                line-height: 26.24px;
-                text-align: left;
-                margin: 10px 0;
-            }
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 26.24px;
+        text-align: left;
+        margin: 10px 0;
+    }
+
     ul {
         list-style: none;
         padding: 0;
@@ -331,56 +324,42 @@ footer {
             i {
                 margin-right: 10px;
             }
-
-            
         }
     }
+
     a {
-                color: white;
-                text-decoration: none;
-            }
+        color: white;
+        text-decoration: none;
+    }
 }
 
 @media screen and (min-width: 769px) {
-
-
-.reservation {
-
-    .btn {
-        width: 218px;
-        
+    .reservation {
+        .btn {
+            width: 218px;
+        }
     }
 
-}
+    .fonctionnement {
+        h3 {
+            margin-left: 92px;
+        }
 
-.fonctionnement  {
-
-    h3 {
-        
-       
-        margin-left: 92px;
-
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 30%;
+        }
     }
 
-    .buttons-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 30%;
-        
+    .restaurant {
+        .cardscontainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 60px 100px;
+        }
     }
-}
-
-.restaurant {
-
-    .cardscontainer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 60px 100px;
-    }
- }
-
-
 }
 
 footer {
@@ -412,16 +391,12 @@ footer {
         text-decoration: none;
         margin-bottom: -10px;
         
-
         li {
             margin-right: 0px;
             display: flex;
             align-items: center;
 
-            
-
             strong {
-                
                 margin-left: 0;
 
                 &:last-child {
@@ -436,15 +411,5 @@ footer {
         text-decoration: none;
         order: 1;
         margin-left: 20px;
-        
     }
 }
-
-  
-  
-
-
-
-
-
-

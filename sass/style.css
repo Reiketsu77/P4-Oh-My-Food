@@ -225,28 +225,36 @@ header h1 img {
   cursor: pointer;
   position: relative;
 }
-.restaurant .cardscontainer article .card-heart .fa-regular,
-.restaurant .cardscontainer article .card-heart .fa-solid {
+.restaurant .checkbox-container {
+  position: relative;
+  display: inline-block;
+}
+.restaurant .checkbox-container input[type=checkbox] {
+  display: FLEX;
+}
+.restaurant .checkbox-container .fa-heart {
+  font-size: 24px;
+  cursor: pointer;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   transition: opacity 0.3s ease;
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
-.restaurant .cardscontainer article .card-heart .fa-regular {
+.restaurant .checkbox-container .fa-regular {
+  z-index: 1;
   opacity: 1;
 }
-.restaurant .cardscontainer article .card-heart .fa-solid {
+.restaurant .checkbox-container .fa-solid {
+  z-index: 0;
   opacity: 0;
 }
-.restaurant .cardscontainer article input[type=checkbox] {
-  display: none;
-}
-.restaurant .cardscontainer article input[type=checkbox]:checked ~ .card-heart .fa-regular {
+.restaurant .checkbox-container input[type=checkbox]:checked + label .fa-regular.fa-heart {
   opacity: 0;
 }
-.restaurant .cardscontainer article input[type=checkbox]:checked ~ .card-heart .fa-solid {
+.restaurant .checkbox-container input[type=checkbox]:checked + label .fa-solid.fa-heart {
   opacity: 1;
+  background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 footer {
