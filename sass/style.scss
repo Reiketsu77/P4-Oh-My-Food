@@ -250,10 +250,10 @@ header {
 
     .checkbox-container {
         position: relative;
-        display: inline-block; 
+
 
         input[type="checkbox"] {
-            display: FLEX; 
+            display: flex; 
         }
 
         .fa-heart {
@@ -262,6 +262,7 @@ header {
             position: absolute;
             top: 0;
             left: 0;
+            color: red;
             transition: opacity 0.3s ease; 
             color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)
 
@@ -277,11 +278,11 @@ header {
             opacity: 0; 
         }
 
-        input[type="checkbox"]:checked + label .fa-regular.fa-heart {
+        input[type="checkbox"]:checked ~ .fa-regular {
             opacity: 0; 
         }
 
-        input[type="checkbox"]:checked + label .fa-solid.fa-heart {
+        input[type="checkbox"]:checked ~ .fa-solid {
             opacity: 1; 
             background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)
 

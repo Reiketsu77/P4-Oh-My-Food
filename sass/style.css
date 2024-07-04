@@ -227,10 +227,9 @@ header h1 img {
 }
 .restaurant .checkbox-container {
   position: relative;
-  display: inline-block;
 }
 .restaurant .checkbox-container input[type=checkbox] {
-  display: FLEX;
+  display: flex;
 }
 .restaurant .checkbox-container .fa-heart {
   font-size: 24px;
@@ -249,10 +248,10 @@ header h1 img {
   z-index: 0;
   opacity: 0;
 }
-.restaurant .checkbox-container input[type=checkbox]:checked + label .fa-regular.fa-heart {
+.restaurant .checkbox-container input[type=checkbox]:checked ~ .fa-regular {
   opacity: 0;
 }
-.restaurant .checkbox-container input[type=checkbox]:checked + label .fa-solid.fa-heart {
+.restaurant .checkbox-container input[type=checkbox]:checked ~ .fa-solid {
   opacity: 1;
   background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
