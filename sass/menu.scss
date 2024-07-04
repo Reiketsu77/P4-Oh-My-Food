@@ -7,6 +7,7 @@
 
 
 
+
 .image {
     height: 275px;
     width: 100%;
@@ -40,6 +41,7 @@ article {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px; 
+
 
 h3 {
     font-family: 'Roboto', cursive;
@@ -175,7 +177,7 @@ footer {
         margin-top: -19px;
     }
         }
-    }
+    
 
     main {
         display: flex;
@@ -194,3 +196,4 @@ footer {
         border-radius: 40px 40px 0px 0px;;
     }
   }
+}
