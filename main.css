@@ -1,1 +1,321 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+header h1 {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 img {
+  height: 36px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.reservation {
+  background-color: #F3F3F3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 260px;
+  padding-top: 32px;
+}
+.reservation h2 {
+  font-size: 24px;
+  line-height: 28.13px;
+  height: 68px;
+  padding: 0px 72px;
+}
+.reservation p {
+  font-size: 18px;
+  line-height: 21.09px;
+  font-weight: 300;
+}
+.reservation p a {
+  text-decoration: none;
+  color: inherit;
+}
+.reservation button {
+  background: linear-gradient(135deg, #9356DC 100%, #FF79DA 100%);
+  height: 50px;
+  border-radius: 24px;
+  width: 40%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 15px;
+  transition: background 0.3s;
+}
+.reservation button:hover {
+  background: linear-gradient(177deg, #9356DC 15%, #FF79DA 100%, #FFFFFF 15%);
+}
+.reservation .btn {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  align-items: center;
+  width: 56%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.recherche {
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding-left: 60px;
+}
+.recherche input {
+  background-color: #EAEAEA;
+  border: none;
+}
+
+.fonctionnement {
+  padding: 25px;
+}
+.fonctionnement h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  padding: 20px 0px 0px 0px;
+}
+.fonctionnement .buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 25px;
+  width: 98%;
+  margin-left: 5px;
+}
+.fonctionnement .custom-button {
+  background-color: #F6F6F6;
+  height: 72.38px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.fonctionnement .custom-button i {
+  padding-right: 14px;
+  color: #7E7E7E;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.fonctionnement .custom-button i:hover {
+  color: #9356DC;
+  background-color: transparent;
+}
+.fonctionnement .custom-button p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+.fonctionnement .custom-button span {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 6px 11px;
+  margin-left: -31px;
+}
+
+.restaurant {
+  background-color: #F3F3F3;
+  padding-bottom: 1px;
+}
+.restaurant h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  padding: 55px 0px 20px 25px;
+}
+.restaurant .cardscontainer {
+  padding: 0 20px;
+}
+.restaurant .cardscontainer article {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 15px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.restaurant .cardscontainer article .card-image {
+  grid-area: 1/1/2/3;
+  width: 100%;
+  height: 231px;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant .cardscontainer article .card-info {
+  grid-area: 2/1/3/2;
+  padding: 10px;
+}
+.restaurant .cardscontainer article .card-info p {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19.92px;
+  text-align: left;
+  text-decoration: none;
+  margin: 0;
+}
+.restaurant .cardscontainer article .card-info strong {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+.restaurant .cardscontainer article .card-tag {
+  grid-area: 1/2/2/3;
+  width: 80%;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #008766;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+.restaurant .cardscontainer article .card-heart {
+  grid-area: 2/2/3/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d3d3d3;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+}
+.restaurant .checkbox-container {
+  position: relative;
+}
+.restaurant .checkbox-container input[type=checkbox] {
+  display: flex;
+}
+.restaurant .checkbox-container .fa-heart {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.restaurant .checkbox-container .fa-regular {
+  z-index: 1;
+  opacity: 1;
+  color: black;
+}
+.restaurant .checkbox-container .fa-solid {
+  z-index: 0;
+  opacity: 0;
+  color: #9356DC;
+}
+.restaurant .checkbox-container input[type=checkbox]:checked ~ .fa-regular {
+  opacity: 0;
+}
+.restaurant .checkbox-container input[type=checkbox]:checked ~ .fa-solid {
+  opacity: 1;
+  background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-bottom: 5px;
+}
+footer h3 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.24px;
+  text-align: left;
+  margin: 10px 0;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 769px) {
+  .reservation .btn {
+    width: 218px;
+  }
+  .fonctionnement h3 {
+    margin-left: 92px;
+  }
+  .fonctionnement .buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30%;
+  }
+  .restaurant .cardscontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px 100px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}/*# sourceMappingURL=main.css.map */

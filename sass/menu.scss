@@ -9,14 +9,7 @@
     width: 100%;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    .titre {
 
-        height: 34px;
-    }
-}
 
 .card {
     background-color: #F3F3F3;
@@ -185,17 +178,7 @@ footer {
 }
 
 @media screen and (min-width: 769px) {
-    header {
-        h1 {
-            width: 100%;
-            height: 96px;
-            background-color: white;
-            padding: 46px;
-            margin-top: -19px;
-
-        
-        }
-    }
+   
 
     main {
         display: flex;

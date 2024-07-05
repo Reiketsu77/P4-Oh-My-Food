@@ -15,16 +15,6 @@ a {
   text-decoration: none;
 }
 
-header h1 {
-  height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header h1 img {
-  height: 36px;
-}
-
 .reservation {
   background-color: #F3F3F3;
   text-align: center;
