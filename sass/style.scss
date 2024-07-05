@@ -262,20 +262,21 @@ header {
             position: absolute;
             top: 0;
             left: 0;
-            color: red;
             transition: opacity 0.3s ease; 
-            color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)
+            
 
         }
 
         .fa-regular {
             z-index: 1; 
             opacity: 1; 
+            color: black;
         }
 
         .fa-solid {
             z-index: 0; 
             opacity: 0; 
+            color:  #9356DC;
         }
 
         input[type="checkbox"]:checked ~ .fa-regular {

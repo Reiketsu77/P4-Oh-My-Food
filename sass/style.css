@@ -238,15 +238,16 @@ header h1 img {
   top: 0;
   left: 0;
   transition: opacity 0.3s ease;
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .restaurant .checkbox-container .fa-regular {
   z-index: 1;
   opacity: 1;
+  color: black;
 }
 .restaurant .checkbox-container .fa-solid {
   z-index: 0;
   opacity: 0;
+  color: #9356DC;
 }
 .restaurant .checkbox-container input[type=checkbox]:checked ~ .fa-regular {
   opacity: 0;
