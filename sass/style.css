@@ -247,45 +247,6 @@ a {
   background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.75px;
-  margin-bottom: 5px;
-}
-footer h3 {
-  font-family: Shrikhand;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 26.24px;
-  text-align: left;
-  margin: 10px 0;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-footer ul li {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
-footer ul li i {
-  margin-right: 10px;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
 @media screen and (min-width: 769px) {
   .reservation .btn {
     width: 218px;
