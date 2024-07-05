@@ -269,7 +269,6 @@ footer {
   font-size: 16px;
   line-height: 18.75px;
   margin-bottom: 5px;
-  height: 114px;
 }
 footer h3 {
   font-family: Shrikhand;
@@ -315,49 +314,8 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px 100px;
   }
-}
-footer {
-  background-color: #353535;
-  color: white;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  padding: 20px;
-  height: 114px;
-}
-footer h3 {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 26.24px;
-  margin: 0 10px;
-  order: 1;
-  margin-bottom: -2px;
-}
-footer ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  order: 2;
-  text-decoration: none;
-  margin-bottom: -10px;
-}
-footer ul li {
-  margin-right: 0px;
-  display: flex;
-  align-items: center;
-}
-footer ul li strong {
-  margin-left: 0;
-}
-footer ul li strong:last-child {
-  margin-right: 50px;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-  order: 1;
-  margin-left: 20px;
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }/*# sourceMappingURL=style.css.map */

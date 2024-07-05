@@ -9,6 +9,14 @@
   width: 100%;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+h1 .titre {
+  height: 34px;
+}
+
 .card {
   background-color: #F3F3F3;
   width: 100%;
@@ -160,7 +168,8 @@ footer a {
 
 @media screen and (min-width: 769px) {
   header h1 {
-    height: 50px;
+    width: 100%;
+    height: 96px;
     background-color: white;
     padding: 46px;
     margin-top: -19px;
@@ -170,12 +179,7 @@ footer a {
     flex-direction: column;
     align-items: center;
   }
-  main .image {
-    height: 956px;
-    margin-top: -335px;
-  }
   main .card {
-    margin-top: -275px;
     width: 75%;
     border-radius: 40px 40px 0px 0px;
   }
