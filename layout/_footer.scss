@@ -1,3 +1,6 @@
+@media screen and (max-width: 769px) {
+
+
 footer {
     background-color: #353535;
     color: white;
@@ -31,4 +34,15 @@ footer {
             margin: 0;
         }
     }
+}
+}
+
+@media screen and (min-width: 769px) {
+
+
+footer {
+
+    display: flex;
+    flex-direction: row-reverse;
+}
 }

@@ -7,6 +7,7 @@
 .image {
     height: 275px;
     width: 100%;
+    object-fit: cover;
 }
 
 
@@ -109,6 +110,7 @@
                 transition: all 0.3s ease;
                 height: 100%;
                 margin-right: -10px;
+                
             }
 
             &:hover {
