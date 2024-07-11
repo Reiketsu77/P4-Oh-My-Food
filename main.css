@@ -344,7 +344,6 @@ body {
   footer h3 {
     font-family: "Shrikhand", cursive;
     font-size: 18px;
-    font-style: italic;
     font-weight: 400;
     line-height: 26.24px;
     text-align: left;
@@ -352,8 +351,6 @@ body {
   }
   footer p {
     margin: 10px 0;
-    display: flex;
-    align-items: center;
   }
   footer a {
     color: white;
@@ -361,6 +358,22 @@ body {
   }
   footer a p {
     margin: 0;
+  }
+  footer i {
+    margin-right: 10px;
+  }
+  footer .liste {
+    display: flex;
+    align-items: center;
+  }
+  footer .footer-links, footer .footer-info {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  footer .footer-info {
+    align-items: center;
   }
 }
 #loader {
