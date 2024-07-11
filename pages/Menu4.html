@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Document</title>
+        <link rel="stylesheet" href="../sass/menu.css">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="../layout/_footer.scss">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    </head>
 <body>
     <header>
         <h1>
-            <i class="fa-solid fa-arrow-left"></i>
-            <img class="titre" src="../images/ohmyfood.png" alt="">
+            <a href="../index.html">
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <img src="../images/ohmyfood.png" alt="">
         </h1>
     </header>
     <main>
@@ -20,7 +24,7 @@
         <section class="card">
             <div>
                 <h2>À la française</h2>
-                <i></i>    
+                <i class="fa-solid fa-heart"></i>     
             </div>
             <article>
                 <h3>Entrées</h3>
@@ -28,18 +32,21 @@
                     <p class="plat"><strong>Tartare de poulpe acidulé</strong></p>
                     <p class="detail">Aux zestes d'orange</p>
                     <p class="price">25€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Velouté de légumes d'antan</strong></p>
                     <p class="detail">Carotte, panais, topinambour</p>
                     <p class="price">35€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Soupe à l'oignon</strong></p>
                     <p class="detail">Revisitée</p>
                     <p class="price">20€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             </article>
             <article>
@@ -48,18 +55,21 @@
                     <p class="plat"><strong>Coquilles Saint-Jacques</strong></p>
                     <p class="detail">Accompagnées d'une purée de panais</p>
                     <p class="price">40€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Magret de canard</strong></p>
                     <p class="detail">Et parmentier de pommes de terre</p>
                     <p class="price">35€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Pigeonneau d’Ille-et-Vilaine</strong></p>
                     <p class="detail">Sur son lit de gnocchis aux légumes</p>
                     <p class="price">44€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             </article>
             <article>
@@ -68,31 +78,39 @@
                     <p class="plat"><strong>Pétales de violettes glacés</strong></p>
                     <p class="detail">Et purée de noisettes</p>
                     <p class="price">18€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Fondant au chocolat</strong></p>
                     <p class="detail">Revisité</p>
                     <p class="price">22€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             
                 <div class="card-plat">
                     <p class="plat"><strong>Millefeuille croustillant</strong></p>
                     <p class="detail">Myrtilles et pâte d’amande</p>
                     <p class="price">23€</p>
+                    <div class="menu-checkmark"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
             </article>
             <button>Commander</button>
         </section>
     </main>
     <footer>
-        <h3>Oh my food</h3>
-        <ul>
-            <li><i class="fa-solid fa-utensils"></i><strong>Proposer un restaurant</strong></li>
-            <li><i class="fa-solid fa-handshake-angle"></i><strong>Devenir partenaire</strong></li>
-            <li>Mentions légales</li>
-        </ul>
-        <a href="mailto:ohmyfoodcontact@gmail.com">Contact</a>
-    </footer>
+        <h3>Oh my food</h3> 
+        <div class="liste">
+            <div class="footer-links">
+                <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>  
+                <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+            </div>
+            <div class="footer-info">
+                <p>Mentions légales</p>
+                <a href="mailto:ohmyfoodcontact@gmail.com">Contact</a>
+            </div>
+        </div>
+    
+</footer>
 </body>
 </html>
