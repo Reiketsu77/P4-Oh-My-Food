@@ -121,6 +121,7 @@
 .card article .card-plat .menu-checkmark i {
   font-size: 1em;
   color: #99E2D0;
+  background-color: white;
 }
 .card article .card-plat:hover .menu-checkmark {
   right: 0;
