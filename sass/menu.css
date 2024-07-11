@@ -11,6 +11,16 @@
      object-fit: cover;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .card {
   background-color: #F3F3F3;
   width: 100%;
@@ -68,6 +78,18 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+.card article .card-plat:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.card article .card-plat:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.card article .card-plat:nth-of-type(3) {
+  animation-delay: 0.6s;
 }
 .card article .card-plat .plat {
   grid-area: 1/1/2/3;

@@ -11,155 +11,179 @@
 }
 
 
-
-.card {
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
     background-color: #F3F3F3;
     width: 100%;
     border-radius: 40px;
     padding: 15px;
     position: relative;
     margin-top: -58px;
-
+  
     .title-heart-icon {
-        display: flex;
-        align-items: baseline;
-        gap: 22px;
-
+      display: flex;
+      align-items: baseline;
+      gap: 22px;
     }
-
+  
     h2 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: 400;
-        font-style: italic;
-        font-size: 28px;
-        line-height: 40.82px;
-        color: #101010;
-        margin: 0;
-        padding: 0;
-        padding-top: 16px;
+      font-family: 'Shrikhand', cursive;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 28px;
+      line-height: 40.82px;
+      color: #101010;
+      margin: 0;
+      padding: 0;
+      padding-top: 16px;
     }
-
+  
     .fa-solid {
-        font-weight: normal;
-        font-size: 25px;
+      font-weight: normal;
+      font-size: 25px;
     }
-
+  
     article {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-
-        h3 {
-            font-family: 'Roboto', cursive;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 22.5px;
-            text-transform: uppercase;
-            display: inline-block;
-            padding-bottom: 12px;
-            border-bottom: 4px solid #99E2D0;
-            width: 12%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+  
+      h3 {
+        font-family: 'Roboto', cursive;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 22.5px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: 12px;
+        border-bottom: 4px solid #99E2D0;
+        width: 12%;
+      }
+  
+      .card-plat {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s ease forwards;
+  
+        &:nth-of-type(1) {
+          animation-delay: 0.2s;
         }
-
-        .card-plat {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            grid-template-rows: auto auto;
-            grid-column-gap: 10px;
-            grid-row-gap: 5px;
+  
+        &:nth-of-type(2) {
+          animation-delay: 0.4s;
+        }
+  
+        &:nth-of-type(3) {
+          animation-delay: 0.6s;
+        }
+  
+        .plat {
+          grid-area: 1 / 1 / 2 / 3;
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21.09px;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+  
+        .detail {
+          grid-area: 2 / 1 / 3 / 2;
+          font-family: 'Roboto', sans-serif;
+          font-size: 15.04px;
+          font-weight: 300;
+          line-height: 17.63px;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+  
+        .price {
+          grid-area: 1 / 2 / 3 / 3;
+          font-family: 'Roboto', sans-serif;
+          font-size: 15.04px;
+          font-weight: 700;
+          line-height: 17.63px;
+          text-align: right;
+          transition: all 0.3s ease;
+        }
+  
+        .menu-checkmark {
+          color: white;
+          background-color: #99E2D0;
+          padding: 10px;
+          border-radius: 0px 15px 15px 0px;
+          position: absolute;
+          right: -50px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+          height: 69px;
+          width: 8%;
+          margin-right: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 18px;
+  
+          i {
+            font-size: 1em;
+            color: #99E2D0;
             background-color: white;
-            border-radius: 15px;
-            padding: 10px;
-            margin-bottom: 10px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-
-            .plat {
-                grid-area: 1 / 1 / 2 / 3;
-                font-family: 'Roboto', sans-serif;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 21.09px;
-                text-align: left;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .detail {
-                grid-area: 2 / 1 / 3 / 2;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15.04px;
-                font-weight: 300;
-                line-height: 17.63px;
-                text-align: left;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .price {
-                grid-area: 1 / 2 / 3 / 3;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15.04px;
-                font-weight: 700;
-                line-height: 17.63px;
-                text-align: right;
-                transition: all 0.3s ease;
-            }
-
-            .menu-checkmark {
-                color: white;
-                background-color: #99E2D0;
-                padding: 10px;
-                border-radius: 0px 15px 15px 0px;
-                position: absolute;
-                right: -50px;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all 0.3s ease;
-                height: 69px;
-                width: 8%;
-                margin-right: -10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding-right: 18px;
-                
-            }
-
-            .menu-checkmark i {
-                font-size: 1em; 
-                color: #99E2D0; 
-                background-color: white;
-                }
-
-            &:hover {
-                .menu-checkmark {
-                    right: 0;
-                }
-                .price {
-                    transform: translateX(-50px);
-                }
-            }
+          }
         }
+  
+        &:hover .menu-checkmark {
+          right: 0;
+        }
+  
+        &:hover .price {
+          transform: translateX(-50px);
+        }
+      }
     }
-
+  
     button {
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        height: 50px;
-        border-radius: 24px;
-        width: 40%;
-        color: white;
-        border: 0px solid transparent;
-        cursor: pointer;
-        margin-top: 10px;
-        padding: 15px;
-        display: block;
-        margin: auto;
+      background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+      height: 50px;
+      border-radius: 24px;
+      width: 40%;
+      color: white;
+      border: 0px solid transparent;
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 15px;
+      display: block;
+      margin: auto;
     }
-}
+  }
+  
+
 
 
 
