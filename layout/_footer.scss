@@ -40,9 +40,38 @@ footer {
 @media screen and (min-width: 769px) {
 
 
-footer {
-
-    display: flex;
-    flex-direction: row-reverse;
-}
+    footer {
+        background-color: #353535;
+        color: white;
+        display: flex;
+        flex-direction: row-reverse;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+    
+        h3 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 26.24px;
+            text-align: left;
+            margin: 10px 0;
+        }
+    
+        p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+    
+        a {
+            color: white;
+            text-decoration: none;
+    
+            p {
+                margin: 0;
+            }
+        }
+    }
 }

@@ -25,6 +25,10 @@ header a {
   align-items: center;
   margin-right: auto;
 }
+header i {
+  font-size: 20px;
+  color: #353535;
+}
 
 * {
   margin: 0;
@@ -329,7 +333,33 @@ body {
 }
 @media screen and (min-width: 769px) {
   footer {
+    background-color: #353535;
+    color: white;
     display: flex;
     flex-direction: row-reverse;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  footer h3 {
+    font-family: "Shrikhand", cursive;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26.24px;
+    text-align: left;
+    margin: 10px 0;
+  }
+  footer p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a p {
+    margin: 0;
   }
 }/*# sourceMappingURL=main.css.map */
