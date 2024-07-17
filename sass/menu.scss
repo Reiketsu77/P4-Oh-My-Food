@@ -1,213 +1,196 @@
+@import "../utiles/mixins";
+@import "../utiles/variables_menu";
+
+
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .image {
-    height: 275px;
-    width: 100%;
-    object-fit: cover;
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
 }
 
 
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.card {
+  background-color: $background-color-primary;
+  width: 100%;
+  border-radius: $border-radius-card;
+  padding: $card-padding;
+  position: relative;
+  margin-top: -58px;
+
+  .title-heart-icon {
+    @include flex-center(baseline);
+    gap: 22px;
+  }
+
+  h2 {
+    font-family: $font-family-secondary;
+    font-weight: 400;
+    font-style: italic;
+    @include text-style(28px, 400, 40.82px);
+    color: $color-primary;
+    padding-top: 16px;
+  }
+
+  .checkbox-container .fa-heart {
+    position: absolute;
+    margin-top: 10px;
+  }
+
+  .fa-solid {
+    font-size: 25px;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    h3 {
+      font-family: $font-family-primary;
+      @include text-style(20px, normal, 22.5px);
+      text-transform: uppercase;
+      display: inline-block;
+      padding-bottom: 12px;
+      border-bottom: 4px solid $background-color-secondary;
+      width: 12%;
+      margin-bottom: 14px;
     }
   }
-  
-  .card {
-    background-color: #F3F3F3;
-    width: 100%;
-    border-radius: 40px;
-    padding: 15px;
+
+  .card-plat {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 5px 10px;
+    background-color: white;
+    border-radius: $border-radius-element;
+    padding: 10px;
+    margin-bottom: 10px;
     position: relative;
-    margin-top: -58px;
-  
-    .title-heart-icon {
-      display: flex;
-      align-items: baseline;
-      gap: 22px;
+    overflow: hidden;
+    transition: all $animation-duration ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: $animation-fadeIn;
+
+    &:nth-of-type(1) {
+      animation-delay: $animation-delay;
     }
-  
-    h2 {
-      font-family: 'Shrikhand', cursive;
-      font-weight: 400;
-      font-style: italic;
-      font-size: 28px;
-      line-height: 40.82px;
-      color: #101010;
-      margin: 0;
-      padding: 0;
-      padding-top: 16px;
+
+    &:nth-of-type(2) {
+      animation-delay: calc(2 * $animation-delay);
     }
-  
-    .fa-solid {
-      font-size: 25px;
+
+    &:nth-of-type(3) {
+      animation-delay: calc(3 * $animation-delay);
     }
-  
-    article {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-  
-      h3 {
-        font-family: 'Roboto', cursive;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 22.5px;
-        text-transform: uppercase;
-        display: inline-block;
-        padding-bottom: 12px;
-        border-bottom: 4px solid #99E2D0;
-        width: 12%;
-        margin-bottom: 14px;
-}
-      }
-  
-      .card-plat {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto auto;
-        grid-column-gap: 10px;
-        grid-row-gap: 5px;
+
+    .plat, .detail {
+      font-family: $font-family-primary;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+
+    .plat {
+      grid-area: 1 / 1 / 2 / 3;
+      @include text-style(18px, 500, 21.09px);
+    }
+
+    .detail {
+      grid-area: 2 / 1 / 3 / 2;
+      @include text-style(15.04px, 300, 17.63px);
+    }
+
+    .price {
+      grid-area: 1 / 2 / 3 / 3;
+      font-family: $font-family-primary;
+      @include text-style(15.04px, 700, 17.63px);
+      text-align: right;
+      transition: all $animation-duration ease;
+      margin-right: 13px;
+      margin-top: 26px;
+      z-index: 2;
+      position: relative;
+      background-color: rgba(255, 255, 255, 1); 
+      padding: 6px 10px; 
+      border-radius: $border-radius-element; 
+    }
+
+    .menu-checkmark {
+      color: white;
+      background-color: $background-color-secondary;
+      padding: 10px;
+      border-radius: 0 $border-radius-element $border-radius-element 0;
+      position: absolute;
+      right: -64px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all $animation-duration ease;
+      height: 78px;
+      margin-right: -10px;
+      @include flex-center;
+      width: 70px;
+
+      i {
+        font-size: 1em;
+        color: $background-color-secondary;
         background-color: white;
-        border-radius: 15px;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.5s ease forwards;
-  
-        &:nth-of-type(1) {
-          animation-delay: 0.2s;
-        }
-  
-        &:nth-of-type(2) {
-          animation-delay: 0.4s;
-        }
-  
-        &:nth-of-type(3) {
-          animation-delay: 0.6s;
-        }
-  
-        .plat {
-          grid-area: 1 / 1 / 2 / 3;
-          font-family: 'Roboto', sans-serif;
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 21.09px;
-          text-align: left;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-  
-        .detail {
-          grid-area: 2 / 1 / 3 / 2;
-          font-family: 'Roboto', sans-serif;
-          font-size: 15.04px;
-          font-weight: 300;
-          line-height: 17.63px;
-          text-align: left;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-  
-        .price {
-          grid-area: 1 / 2 / 3 / 3;
-          font-family: 'Roboto', sans-serif;
-          font-size: 15.04px;
-          font-weight: 700;
-          line-height: 17.63px;
-          text-align: right;
-          transition: all 0.3s ease;
-          margin-right: 13px;
-          margin-top: 26px;
-        }
-  
-        .menu-checkmark {
-          color: white;
-          background-color: #99E2D0;
-          padding: 10px;
-          border-radius: 0px 15px 15px 0px;
-          position: absolute;
-          right: -64px;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: all 0.3s ease;
-          height: 69px;
-          margin-right: -10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-right: 18px;
-          width: 70px;
-  
-          i {
-            font-size: 1em;
-            color: #99E2D0;
-            background-color: white;
-            border-radius: 50%;
-            padding: 2px;
-          }
-        }
-  
-        &:hover .menu-checkmark {
-          right: 0;
-        }
-  
-        &:hover .price {
-          transform: translateX(-50px);
-        }
+        border-radius: 50%;
+        padding: 2px;
       }
     }
-  
-    button {
-      display: block;
-      margin: auto;
+
+    &:hover .menu-checkmark {
+      right: 0;
     }
 
-  
+    &:hover .price {
+      transform: translateX(-50px);
+    }
+  }
 
-
-
+  button {
+    display: block;
+    margin: auto;
+  }
+}
 
 @media screen and (min-width: 769px) {
-   
+  main {
+    @include flex-center(column);
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .card {
+      width: 75%;
+      border-radius: $border-radius-card $border-radius-card 0 0;
 
-        
-
-        .card {
-            
-            width: 75%;
-            border-radius: 40px 40px 0px 0px;
-
-        h2 {
-            font-style: normal;
-            }
-        }
-
-        .title-heart-icon {
-            justify-content: center;
-        
-        }
-
-        
+      h2 {
+        font-style: normal;
+      }
     }
+
+    .title-heart-icon {
+      justify-content: center;
+    }
+  }
 }
