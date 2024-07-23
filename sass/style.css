@@ -121,7 +121,7 @@ body {
 .restaurant .cardscontainer {
   padding: 0 20px;
 }
-.restaurant .cardscontainer article {
+.restaurant .cardscontainer .card {
   margin-bottom: 20px;
   background-color: white;
   border-radius: 15px;
@@ -129,40 +129,47 @@ body {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 3fr 1fr;
+  position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.restaurant .cardscontainer article .card-image {
-  grid-area: 1/1/2/3;
+.restaurant .cardscontainer .card .card-link {
+  grid-area: 1/1/3/3;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.restaurant .cardscontainer .card .card-link img.card-image {
   width: 100%;
   height: 231px;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant .cardscontainer article .card-info {
-  grid-area: 2/1/3/2;
+.restaurant .cardscontainer .card .card-link .card-info {
   padding: 10px;
 }
-.restaurant .cardscontainer article .card-info p, .restaurant .cardscontainer article .card-info strong {
+.restaurant .cardscontainer .card .card-link .card-info p, .restaurant .cardscontainer .card .card-link .card-info strong {
   font-family: "Roboto", sans-serif;
   text-align: left;
   margin: 0;
 }
-.restaurant .cardscontainer article .card-info p {
+.restaurant .cardscontainer .card .card-link .card-info p {
   color: #000000;
   font-size: 17px;
   font-weight: 300;
   line-height: 19.92px;
 }
-.restaurant .cardscontainer article .card-info strong {
+.restaurant .cardscontainer .card .card-link .card-info strong {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
   color: #000000;
 }
-.restaurant .cardscontainer article .card-tag {
-  grid-area: 1/2/2/3;
-  width: 80%;
+.restaurant .cardscontainer .card .card-link .card-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22%;
   height: 29px;
   display: flex;
   flex-direction: row;
@@ -170,11 +177,10 @@ body {
   align-items: center;
   background-color: #99E2D0;
   color: #008766;
-  margin: 10px;
   border-radius: 5px;
   font-size: 0.9em;
 }
-.restaurant .cardscontainer article .card-heart {
+.restaurant .cardscontainer .card .card-heart {
   grid-area: 2/2/3/3;
   display: flex;
   flex-direction: row;
@@ -186,6 +192,29 @@ body {
   position: relative;
   top: -2px;
   left: 4px;
+}
+.restaurant .cardscontainer .card .checkbox-container {
+  margin-top: 10px;
+}
+.restaurant .cardscontainer .card .checkbox-container input[type=checkbox] {
+  display: none;
+}
+.restaurant .cardscontainer .card .checkbox-container input[type=checkbox] + label.fa-regular.fa-heart {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;
+}
+.restaurant .cardscontainer .card .checkbox-container input[type=checkbox]:checked + label.fa-regular.fa-heart {
+  display: none;
+}
+.restaurant .cardscontainer .card .checkbox-container input[type=checkbox]:checked + label.fa-solid.fa-heart {
+  display: inline;
+  color: red;
+}
+.restaurant .cardscontainer .card .checkbox-container input[type=checkbox] + label.fa-solid.fa-heart {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 .restaurant .checkbox-container .fa-heart {
   position: absolute;
