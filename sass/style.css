@@ -22,9 +22,8 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
-  height: 98px;
   padding: 0 72px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .reservation p {
   font-size: 18px;
@@ -33,7 +32,7 @@ body {
   margin-bottom: 10px;
 }
 .reservation .btn {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .recherche {
@@ -157,6 +156,9 @@ body {
   font-size: 17px;
   font-weight: 300;
   line-height: 19.92px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant .cardscontainer .card .card-link .card-info strong {
   font-size: 18px;
@@ -190,7 +192,7 @@ body {
   cursor: pointer;
   position: relative;
   top: -2px;
-  left: 4px;
+  left: -14px;
 }
 .restaurant .cardscontainer .card .checkbox-container {
   margin-top: 10px;
@@ -222,9 +224,6 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  .reservation .btn {
-    width: 218px;
-  }
   .fonctionnement h3 {
     margin-left: 92px;
   }

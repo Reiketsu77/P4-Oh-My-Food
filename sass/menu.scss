@@ -71,7 +71,7 @@
       display: inline-block;
       padding-bottom: 12px;
       border-bottom: 4px solid $background-color-secondary;
-      width: 12%;
+      width: 59px;
       margin-bottom: 14px;
     }
   }
@@ -173,8 +173,11 @@
   button {
     display: block;
     margin: auto;
+    
+
   }
 }
+
 
 @media screen and (min-width: 769px) {
   main {
@@ -194,3 +197,4 @@
     }
   }
 }
+
