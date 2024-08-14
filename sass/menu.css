@@ -31,7 +31,6 @@
 }
 .card .title-heart-icon {
   display: flex;
-  flex-direction: baseline;
   justify-content: center;
   align-items: center;
   gap: 22px;
@@ -70,88 +69,106 @@
   width: 59px;
   margin-bottom: 14px;
 }
-.card .card-plat {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.card .card-menu {
   background-color: white;
   border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 10px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.5s ease forwards;
+  margin-bottom: 12px;
+  width: 100%;
 }
-.card .card-plat:nth-of-type(1) {
-  animation-delay: 0.2s;
-}
-.card .card-plat:nth-of-type(2) {
-  animation-delay: 0.4s;
-}
-.card .card-plat:nth-of-type(3) {
-  animation-delay: 0.6s;
-}
-.card .card-plat .plat-detail {
-  flex: 1;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.09px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 10px;
-}
-.card .card-plat .price {
+.card .card-menu .price {
   font-family: "Roboto", sans-serif;
   font-size: 15.04px;
   font-weight: 700;
   line-height: 17.63px;
   text-align: right;
-  transition: all 0.3s ease;
-  margin-right: 13px;
-  margin-top: 26px;
-  z-index: 2;
-  position: relative;
+  position: absolute;
+  right: 0;
   background-color: rgb(255, 255, 255);
   padding: 6px 10px;
   border-radius: 15px;
+  transition: transform 0.3s ease, right 0.3s ease;
+  z-index: 2;
+  flex-shrink: 0;
+  bottom: 12px;
 }
-.card .card-plat .menu-checkmark {
+.card .card-menu .menu-checkmark {
   color: white;
   background-color: #99E2D0;
   padding: 10px;
   border-radius: 0 15px 15px 0;
   position: absolute;
-  right: -64px;
+  right: -70px;
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.3s ease;
-  height: 78px;
-  margin-right: -10px;
+  height: 100px;
+  width: 24%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 70px;
+  z-index: 3;
 }
-.card .card-plat .menu-checkmark i {
+.card .card-menu i {
   font-size: 1em;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
   padding: 2px;
 }
-.card .card-plat:hover .menu-checkmark {
-  right: 0;
+.card .card-menu:hover .menu-checkmark {
+  right: -1px;
 }
-.card .card-plat:hover .price {
-  transform: translateX(-50px);
+.card .card-menu:hover .price {
+  transform: translateX(-70px);
 }
-.card button {
+.card .card-menu:hover .card-plat {
+  width: calc(100% - 80px);
+}
+.card .card-menu .card-plat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  gap: 12px;
+}
+.card .card-menu .card-plat .plat-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card .card-menu .card-plat .plat-detail:first-of-type {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+.card .card-menu .card-plat .plat-detail:nth-of-type(2) {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .card-menu button {
   display: block;
   margin: auto;
 }
