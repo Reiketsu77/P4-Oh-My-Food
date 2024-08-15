@@ -99,6 +99,7 @@
   z-index: 2;
   flex-shrink: 0;
   bottom: 12px;
+  width: 45px;
 }
 .card .card-menu .menu-checkmark {
   color: white;
@@ -132,13 +133,13 @@
   transform: translateX(-70px);
 }
 .card .card-menu:hover .card-plat {
-  width: calc(100% - 80px);
+  width: calc(100% - 105px);
 }
 .card .card-menu .card-plat {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  width: 100%;
+  width: calc(100% - 50px);
   overflow: hidden;
   position: relative;
   gap: 12px;
