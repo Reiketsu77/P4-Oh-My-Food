@@ -102,7 +102,6 @@
       right: 0; 
       background-color: rgba(255, 255, 255, 1);
       padding: 6px 10px;
-      border-radius: $border-radius-element;
       transition: transform $animation-duration ease, right $animation-duration ease;
       z-index: 2;
       flex-shrink: 0; 
@@ -120,9 +119,9 @@
       transform: translateY(-50%);
       transition: all $animation-duration ease;
       height: 100px;
-      width: 24%;
       @include flex-center;
       z-index: 3; 
+      padding: 25px;
     }
   
     i {
