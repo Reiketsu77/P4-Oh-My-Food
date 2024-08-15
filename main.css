@@ -190,6 +190,7 @@ button:hover {
 
 .checkbox-container {
   position: relative;
+  right: 10px;
 }
 .checkbox-container input[type=checkbox] {
   display: flex;
