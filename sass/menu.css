@@ -58,7 +58,7 @@
   flex-direction: column;
   margin-bottom: 20px;
 }
-.card article h3 {
+.card article h4 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: normal;
@@ -147,7 +147,7 @@
   font-size: 18px;
   font-weight: 500;
 }
-.card .card-menu .card-plat .plat-detail:first-of-type {
+.card .card-menu .card-plat h3 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -158,7 +158,7 @@
   text-overflow: ellipsis;
   margin-bottom: 5px;
 }
-.card .card-menu .card-plat .plat-detail:nth-of-type(2) {
+.card .card-menu .card-plat .plat-detail {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -173,6 +173,70 @@
   margin: auto;
 }
 
+.menu-card {
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.menu-card .menu-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+.menu-card .menu-info .menu-title {
+  font-size: 1.2em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-card .menu-info .menu-details {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-card .menu-price {
+  font-size: 1.2em;
+  color: #333;
+  margin-left: 10px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.menu-card .menu-checkmarka {
+  color: white;
+  background-color: #99E2D0;
+  font-size: 1.5em;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover .menu-checkmarka {
+  right: 10px;
+}
+
+.menu-card:hover .menu-price {
+  transform: translateX(-50px);
+}
+
+.menu-card:hover .menu-info {
+  max-width: calc(100% - 110px);
+}
+
 @media screen and (min-width: 769px) {
   main {
     display: flex;
@@ -183,6 +247,8 @@
   main .card {
     width: 75%;
     border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-direction: column;
   }
   main .card h2 {
     font-style: normal;
