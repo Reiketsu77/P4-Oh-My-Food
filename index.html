@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="loader">
         <div class="loader-content">
@@ -23,7 +27,7 @@
     </div>
     <header>
         <h1>
-            <img src="images/ohmyfood.png" alt="">
+            <img src="images/ohmyfood.png" alt="Logo Oh My Food">
         </h1>
     </header>
     <main>
@@ -35,7 +39,7 @@
             <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
             <button class="btn">Explorer nos restaurants</button>
         </section>
-        <section class="fonctionnement">
+        <section id="fonctionnement" class="fonctionnement">
             <h3>Fonctionnement</h3>
             <div class="buttons-container">
                 <div class="custom-button">
@@ -55,12 +59,12 @@
                 </div>
             </div>
         </section>
-        <section class="restaurant">
+        <section id="restaurant" class="restaurant">
             <h3>Restaurants</h3>
             <div class="cardscontainer">
                 <article class="card">
                     <a href="pages/Menu1.html" class="card-link">
-                        <img class="card-image" src="images/la-palette-du-gout.jpg" alt="">
+                        <img class="card-image" src="images/la-palette-du-gout.jpg" alt="Restaurant La Palette du Goût à Ménilmontant">
                         <div class="card-info">
                             <p><strong>La palette du goût</strong></p>
                             <p>Ménilmontant</p>
@@ -73,10 +77,10 @@
                         <label for="heartCheckbox1" class="fa-solid fa-heart"></label>
                     </div>
                 </article>
-                
+
                 <article class="card">
                     <a href="pages/Menu2.html" class="card-link">
-                        <img class="card-image" src="images/la_note_enchantée.jpg" alt="">
+                        <img class="card-image" src="images/la_note_enchantée.jpg" alt="Restaurant La Note Enchantée à Charonne">
                         <div class="card-info">
                             <p><strong>La note enchantée</strong></p>
                             <p>Charonne</p>
@@ -89,10 +93,10 @@
                         <label for="heartCheckbox2" class="fa-solid fa-heart"></label>
                     </div>
                 </article>
-                
+
                 <article class="card">
                     <a href="pages/Menu3.html" class="card-link">
-                        <img class="card-image" src="images/A_la_française.jpg" alt="">
+                        <img class="card-image" src="images/A_la_française.jpg" alt="Restaurant À la Française à Cité Rouge">
                         <div class="card-info">
                             <p><strong>À la française</strong></p>
                             <p>Cité Rouge</p>
@@ -104,10 +108,10 @@
                         <label for="heartCheckbox3" class="fa-solid fa-heart"></label>
                     </div>
                 </article>
-                
+
                 <article class="card">
                     <a href="pages/Menu4.html" class="card-link">
-                        <img class="card-image" src="images/le_délice_des_sens.jpg" alt="">
+                        <img class="card-image" src="images/le_délice_des_sens.jpg" alt="Restaurant Le Délice des Sens à Folie-Méricourt">
                         <div class="card-info">
                             <p><strong>Le délice des sens</strong></p>
                             <p>Folie-Méricourt</p>
@@ -119,28 +123,28 @@
                         <label for="heartCheckbox4" class="fa-solid fa-heart"></label>
                     </div>
                 </article>
-                
-                
+
+
             </div>
         </section>
-        
-        
-        
+
+
+
     </main>
-    <footer>
-            <h3>Oh my food</h3> 
-            <div class="liste">
-                <div class="footer-links">
-                    <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>  
-                    <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
-                </div>
-                <div class="footer-info">
-                    <p>Mentions légales</p>
-                    <a href="mailto:ohmyfoodcontact@gmail.com">Contact</a>
-                </div>
+    <footer id="footer">
+        <h3>Oh my food</h3>
+        <div class="liste">
+            <div class="footer-links">
+                <a href="#restaurant"><p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p></a>
+               <a href="#footer"><p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p></a>
             </div>
-        
+            <div class="footer-info">
+               <a href="#footer"><p>Mentions légales</p></a>
+                <a href="mailto:ohmyfoodcontact@gmail.com">Contact</a>
+            </div>
+        </div>
     </footer>
-    
+
 </body>
+
 </html>

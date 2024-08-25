@@ -9,6 +9,7 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 20px;
+    
 
     h3 {
         font-family: 'Shrikhand', cursive;
@@ -24,17 +25,20 @@ footer {
         margin: 10px 0;
         display: flex;
         align-items: center;
+        margin-right: 10px;
+        gap: 10px;
     }
 
     a {
         color: white;
         text-decoration: none;
 
-        p {
-            margin: 0;
-        }
+        
     }
 }
+
+    
+
 }
 
 @media screen and (min-width: 769px) {
@@ -58,9 +62,7 @@ footer {
             margin: 10px 0;
         }
     
-        p {
-            margin: 10px 0;
-        }
+        
     
         a {
             color: white;
@@ -78,6 +80,7 @@ footer {
         .liste {
             display: flex;
             align-items: center;
+
         }
     
         .footer-links, .footer-info {

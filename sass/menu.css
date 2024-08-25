@@ -11,6 +11,10 @@
      object-fit: cover;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -31,7 +35,7 @@
 }
 .card .title-heart-icon {
   display: flex;
-  flex-direction: baseline;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 22px;
@@ -144,15 +148,11 @@
   position: relative;
   gap: 12px;
 }
-.card .card-menu .card-plat .plat-name {
-  font-size: 18px;
-  font-weight: 500;
-}
-.card .card-menu .card-plat h3 {
+.card .card-menu .card-plat strong {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: 500;
   line-height: 21.09px;
+  font-weight: 500;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -169,73 +169,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card .card-menu button {
-  display: block;
-  margin: auto;
-}
-
-.menu-card {
-  width: 90%;
-  max-width: 600px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 10px;
+.card .btn-menu {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 15px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.menu-card .menu-info {
-  flex-grow: 1;
-  min-width: 0;
-}
-.menu-card .menu-info .menu-title {
-  font-size: 1.2em;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu-card .menu-info .menu-details {
-  margin: 5px 0 0;
-  font-size: 0.9em;
-  color: #666;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu-card .menu-price {
-  font-size: 1.2em;
-  color: #333;
-  margin-left: 10px;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-}
-.menu-card .menu-checkmarka {
-  color: white;
-  background-color: #99E2D0;
-  font-size: 1.5em;
-  padding: 5px;
-  border-radius: 50%;
-  position: absolute;
-  right: -50px;
-  transition: all 0.3s ease;
-}
-
-.menu-card:hover .menu-checkmarka {
-  right: 10px;
-}
-
-.menu-card:hover .menu-price {
-  transform: translateX(-50px);
-}
-
-.menu-card:hover .menu-info {
-  max-width: calc(100% - 110px);
 }
 
 @media screen and (min-width: 769px) {

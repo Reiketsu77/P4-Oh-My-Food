@@ -15,6 +15,10 @@
   object-fit: cover;
 }
 
+body {
+  font-family: $font-family-primary;
+}
+
 
 @keyframes fadeIn {
   0% {
@@ -37,7 +41,10 @@
   margin-top: -58px;
 
   .title-heart-icon {
-    @include flex-center(baseline);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 22px;
   }
 
@@ -156,15 +163,12 @@
 
       
       
-      .plat-name {
-        font-size: 18px;
-        font-weight: 500;
-      }
-      h3 {
+      
+      strong {
         font-family: 'Roboto', sans-serif; 
         font-size: 18px; 
-        font-weight: 500; 
         line-height: 21.09px; 
+        font-weight: 500;
         text-align: left;
         white-space: nowrap; 
         overflow: hidden; 
@@ -183,82 +187,14 @@
         text-overflow: ellipsis; 
       }
     }
-  
-    button {
-      display: block;
-      margin: auto;
-    }
+  }
+  .btn-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
 } 
-
-.menu-card{
-  width: 90%;
-    max-width: 600px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    position: relative;
-    transition: all 0.3s ease;
-  .menu-info{
-    flex-grow: 1;
-    min-width: 0;
-  
-  .menu-title{
-    font-size: 1.2em;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu-details {
-    margin: 5px 0 0;
-    font-size: 0.9em;
-    color: #666;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-  }
-}
-.menu-price {
-  font-size: 1.2em;
-    color: #333;
-    margin-left: 10px;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.menu-checkmarka {
-  color: white;
-  background-color: #99E2D0;
-  font-size: 1.5em;
-  padding: 5px;
-  border-radius: 50%;
-  position: absolute;
-  right: -50px;
-  transition: all 0.3s ease;
-  
-}
-}
-
-.menu-card:hover .menu-checkmarka {
-  right: 10px;
-}
-
-.menu-card:hover .menu-price {
-  transform: translateX(-50px);
-}
-
-.menu-card:hover .menu-info {
-  max-width: calc(100% - 110px);
-}
 
 
 
